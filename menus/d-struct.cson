@@ -7,10 +7,10 @@
   {
     'label': 'Packages'
     'submenu': [
-      'label': 'd-struct'
+      'label': 'D-Struct'
       'submenu': [
-        { 'label': 'dub build', 'command': 'd-struct:dub-build' },
-        { 'label': 'dub run', 'command': 'd-struct:dub-run' }
+        { 'label': 'Dub Build', 'command': 'd-struct:dub-build' },
+        { 'label': 'Dub Run', 'command': 'd-struct:dub-run' }
       ]
     ]
   }
