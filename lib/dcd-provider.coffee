@@ -28,13 +28,10 @@ DcdProvider =
     # Should work for .d and .di files
     selector: '.source.d'
 
-    # This will take priority over the default provider, which has an inclusionPriority of 0.
-    # `excludeLowerPriority` will suppress any providers with a lower priority
-    # i.e. The default provider will be suppressed
+    # This will take priority over the default provider, which has an inclusionPriority of 0
     inclusionPriority: 1
-    #excludeLowerPriority: true
 
-    # Suggestions from this will be suggested before the default provider, which has a suggestionPriority of 1.
+    # Suggestions from this will be suggested before the default provider, which has a suggestionPriority of 1
     suggestionPriority: 2
 
     getSuggestions: (options) ->
@@ -42,8 +39,9 @@ DcdProvider =
         The contents of the options object:
         {editor, bufferPosition, scopeDescriptor, prefix, activatedManually}
         ###
+        console.log "Called!!!"
         console.log options.bufferPosition
-        return [{text: "something"}]
+        return null
         ###
         new Promise (resolve) ->
         server = Dcd_Server.getInstance()

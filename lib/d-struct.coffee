@@ -1,10 +1,8 @@
-DcdProvider = require('./dcd-provider')
+console.log "d-struct loaded"
+
+provider = require('./dcd-provider')
 popen = require('child_process').exec
 platform = require('os').platform
-
-# Autocomplete providers
-provide: ->
-    @DcdProvider
 
 commands =
     build:
@@ -35,3 +33,5 @@ module.exports =
         dub_build()
     dubrun: ->
         dub_run()
+    # Autocomplete provider
+    provide: -> provider
